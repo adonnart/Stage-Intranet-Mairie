@@ -1,7 +1,4 @@
-Nom,Prénom (un seul champ ?)
-Poste (Directeur/Maire) (facultatif)
-Numéro
-
+Organisation / Catégories :
 
 Elus municipaux
 
@@ -33,3 +30,20 @@ Pôle Education et Action sociale
     Maison de la solidarité
     Maison de l’enfance
     Centres de loisirs
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Nom,Prénom (un seul champ ?)
+Poste (Directeur/Maire) (facultatif)
+Numéro
+
+
+Nom : [...]
+
+Poste : [...]
+
+Numéro : [...]
+
+Catégorie : [...]
+
+
