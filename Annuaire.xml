@@ -1,36 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!ELEMENT contact (nom, prenom, fixe?, portable?, fax?, poste?)>
+<!DOCTYPE annuaire [
+    <!ELEMENT pole (intitule, fax?, pole*, contact*)>
+    <!ELEMENT intitule (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+
+    <!ELEMENT contact (nom, prenom, fixe?, portable?, poste?)>
     <!ELEMENT nom (#PCDATA)>
     <!ELEMENT prenom (#PCDATA)>
     <!ELEMENT fixe (#PCDATA)>
     <!ELEMENT portable (#PCDATA)>
-    <!ELEMENT fax (#PCDATA)>
     <!ELEMENT poste (#PCDATA)>
+]>
 
 <annuaire>
-    <cat1>
-        <cat2>
+    
+    <pole>
+        <intitule>Elus municipaux</intitule>
+        <contact>
+            <nom>Cap</nom>
+            <prenom>Dominique</prenom>
+            <fixe>765</fixe>
+            <poste>Maire</poste>
+        </contact>
+        <contact>
+            <nom>Le Roux</nom>
+            <prenom>Allain</prenom>
+            <fixe>789</fixe>
+            <poste>Directeur de cabinet</poste>
+        </contact>
+    </pole>
+    
+    <pole>
+        <intitule>Adjoints et conseillers délégués</intitule>
+        <contact>
+            <nom>Henaff</nom>
+            <prenom>Patricia</prenom>
+            <fixe>767</fixe>
+        </contact>
+        <contact>
+            <nom>Nicolas</nom>
+            <prenom>Bernard</prenom>
+            <fixe>716</fixe>
+        </contact>
+    </pole>
+    
+    <pole>
+        <intitule>Pôle Direction Générale</intitule>
+        <contact>
+            <nom>Landry</nom>
+            <prenom>Philippe</prenom>
+            <fixe>763</fixe>
+            <portable>0665118729</portable>
+            <poste>Directeur Général</poste>
+        </contact>
+        <pole>
+            <intitule>Secrétariat Général - Légalité</intitule>
+            <fax>0298375750</fax>
             <contact>
-                <nom>
-                    Cap
-                </nom>
-                <prenom>
-                    Dominique
-                </prenom>
-                <fixe>
-                    765
-                </fixe>
-                <portable>
-                    
-                </portable>
-                <fax>
-                    
-                </fax>
-                <poste>
-                    Maire
-                </poste>
+                <nom>Martin</nom>
+                <prenom>Véronique</prenom>
+                <fixe>747</fixe>
             </contact>
-        </cat2>
-    <cat1>
+            <contact>
+                <nom>Sébille</nom>
+                <prenom>Stéphanie</prenom>
+                <fixe>764</fixe>
+            </contact>
+        </pole>
+    </pole>
 </annuaire>
+
+<!--    <contact>
+            <nom></nom>
+            <prenom></prenom>
+            <fixe></fixe>
+            <portable></portable>
+            <poste></poste>
+        </contact>
+-->
