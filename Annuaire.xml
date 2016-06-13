@@ -1,1 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
+<!ELEMENT contact (nom, prenom, fixe?, portable?, fax?, poste?)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT prenom (#PCDATA)>
+    <!ELEMENT fixe (#PCDATA)>
+    <!ELEMENT portable (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+    <!ELEMENT poste (#PCDATA)>
+
+<annuaire>
+    <cat1>
+        <cat2>
+            <contact>
+                <nom>
+                    Cap
+                </nom>
+                <prenom>
+                    Dominique
+                </prenom>
+                <fixe>
+                    765
+                </fixe>
+                <portable>
+                    
+                </portable>
+                <fax>
+                    
+                </fax>
+                <poste>
+                    Maire
+                </poste>
+            </contact>
+        </cat2>
+    <cat1>
+</annuaire>
