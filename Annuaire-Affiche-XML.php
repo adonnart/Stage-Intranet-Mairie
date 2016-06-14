@@ -5,7 +5,6 @@
 	function fonctionTexte($parseur, $texte){ echo $texte."<br/>"; }
 	
 	xml_parser_set_option($xml_parser,XML_OPTION_TARGET_ENCODING, "UTF-8");
-	
 	$parseurXML = xml_parser_create();
 	
 	xml_set_character_data_handler($parseurXML, "fonctionTexte");
