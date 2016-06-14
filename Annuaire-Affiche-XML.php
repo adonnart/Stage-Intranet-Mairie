@@ -9,7 +9,7 @@
 			if ($contact->fixe != ""){ echo $contact->fixe."<br/>"; }
 			if ($contact->portable != ""){ echo $contact->portable."<br/>"; }
 			
-			foreach($pole1->children() as $pole){
+			foreach($pole->children() as $pole){
 				echo "<b>".$pole->intitule."</b><br/>";
 				if ($contact->fax != ""){ echo $contact->fax."<br/>"; }
 				foreach($pole as $contact){
