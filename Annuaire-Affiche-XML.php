@@ -4,10 +4,10 @@
 		if ($pole->fax != ""){ echo "<br/>".$pole->fax."<br/>"; }
 		foreach($pole as $contact){
 			echo "<p>";
-			if ($contact->poste != ""){ echo "<i style='color:red;'>".$contact->poste."</i><br/>"; }
-			foreach($contact as $personne){ echo "   ".$personne->prenom." ".$personne->nom."<br/>"; }
-			if ($contact->fixe != ""){ echo $contact->fixe."<br/>"; }
-			if ($contact->portable != ""){ echo $contact->portable."<br/>"; }
+			if ($contact->poste != ""){	echo "<i style='color:red;'>".$contact->poste."</i><br/>"; }
+			foreach($contact as $personne){	echo $personne->prenom." ".$personne->nom."<br/>"; }
+			if ($contact->fixe != ""){	echo $contact->fixe."<br/>"; }
+			if ($contact->portable != ""){	echo $contact->portable."<br/>"; }
 			echo "</p><br/>";
 		}
 	}
