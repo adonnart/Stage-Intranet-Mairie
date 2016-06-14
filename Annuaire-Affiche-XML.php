@@ -22,14 +22,18 @@
 	fclose($fp);
 	*/
 	
-	echo "Ca marche.<br/>";
-	$xml = simplexml_load_file('Annuaire/Annuaire-XML.xml') or die("Erreur Parseur.");
-	foreach($xml->children() as $pole){
-		echo $pole->intitule."<br/>";
-		foreach($pole->children() as $contact){
-			echo $contact->nom."<br/>";
-			echo $contact->prenom."<br/>";
+    echo "Ca marche.<br/>";
+    $xml = simplexml_load_file('Annuaire/Annuaire-XML.xml') or die("Erreur Parseur.");
+    foreach($xml as $pole){
+        echo "<br/>".$pole->intitule;
+        foreach($pole->children() as $contact){
+            echo $contact->nom."<br/>";
+            echo $contact->prenom."<br/>";
+			echo $contact->fixe."<br/>";
+			echo $contact->portable."<br/>";
+			echo $contact->poste."<br/>";
 		}
-	}
-	echo "?<br/>";
+		echo "<br/>".$pole->fax;
+    }
+    echo "?<br/>";
 ?>
