@@ -6,7 +6,7 @@
 	<body>
 	<?php
 		function afficheContacts($pole){
-			echo "<table><tr><b>".$pole->intitule."</b></tr>";
+			echo "<table><tr><b>".$pole->intitule."</b></tr><br/>";
 			if ($pole->fax != ""){ echo "<br/><br/><tr>".$pole->fax."</tr><br/>"; }
 			foreach($pole as $contact){
 				echo "<tr>";
