@@ -3,10 +3,10 @@
 	foreach($xml as $pole){
 		echo $pole->intitule;
 		foreach($pole as $contact){
-			echo $contact->poste."<br/>";
+			if ($contact->poste != "") { echo $contact->poste."<br/>"; }
 			echo $contact->prenom." ".$contact->nom."<br/>";
-			echo $contact->fixe."<br/>";
-			echo $contact->portable."<br/>";
+			if ($contact->fixe != "") { echo $contact->fixe."<br/>"; }
+			if ($contact->portable != "") { echo $contact->portable."<br/>"; }
 		}
 		echo $pole->fax."<br/>";
 	}
