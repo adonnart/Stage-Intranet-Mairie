@@ -3,7 +3,7 @@
 <!DOCTYPE annuaire [
     <!ELEMENT annuaire (pole1*)>
 
-    <!ELEMENT pole1 (intitule, fax?, contact*, pole2*, )>
+    <!ELEMENT pole1 (intitule, fax?, contact*, pole2*)>
     <!ELEMENT pole2 (intitule, fax?, contact*)>
     
     <!ELEMENT intitule (#PCDATA)>
