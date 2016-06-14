@@ -18,13 +18,16 @@
 				/*if (!empty($contact->fixe)){ echo "<td>".$contact->fixe."</td>"; }*/
 				/*if (!empty($contact->portable)){ echo "<td>".$contact->portable."</td>"; }*/
 				
-				echo "<td>";
-				if (!empty($contact->fixe) and empty($contact->portable)){ echo $contact->fixe;
-				}else if (empty($contact->fixe) and !empty($contact->portable)){ echo $contact->portable;
-				}else{ echo $contact->fixe.$contact->portable; }
-				echo "</td>";
-					
-				if (!empty($contact->portable)){ */echo "<td>".$contact->portable."</td>"; }
+				if ((!empty($contact->fixe)) and (empty($contact->portable))){
+					echo "<td class='nb'>".$contact->fixe."</td>";
+				}else if ((empty($contact->fixe)) and (!empty($contact->portable))){
+					echo "<td class='nb'>".$contact->portable."</td>";
+				}else{
+					echo "<td class='nbs'>".$contact->fixe.
+					"</td><td class='nbs'>".$contact->portable."</td>";
+				}
+				
+				//echo "</td>";
 				
 				echo "</tr>";
 			}
