@@ -26,7 +26,7 @@
         <contact>
             <poste>Maire</poste>
             <personne>
-                <nom>Cap</nom>
+                <nom>CAP</nom>
                 <prenom>Dominique</prenom>
             </personne>
             <fixe>765</fixe>
@@ -34,7 +34,7 @@
         <contact>
             <poste>Directeur de cabinet</poste>
             <personne>
-                <nom>Le Roux</nom>
+                <nom>LE ROUX</nom>
                 <prenom>Allain</prenom>
             </personne>
             <fixe>789</fixe>
@@ -45,17 +45,69 @@
         <intitule>Adjoints et conseillers délégués</intitule>
         <contact>
             <personne>
-                <nom>Henaff</nom>
+                <nom>HENAFF</nom>
                 <prenom>Patricia</prenom>
             </personne>
             <fixe>767</fixe>
         </contact>
         <contact>
             <personne>
-                <nom>Nicolas</nom>
+                <nom>NICOLAS</nom>
                 <prenom>Bernard</prenom>
             </personne>
             <fixe>716</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>TOULLEC</nom>
+                <prenom>J.-P.</prenom>
+            </personne>
+            <personne>
+                <nom>de CADENET</nom>
+                <prenom>B</prenom>
+            </personne>
+            <fixe>702</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>PAUGAM</nom>
+                <prenom>Michel</prenom>
+            </personne>
+            <personne>
+                <nom>ANDRE</nom>
+                <prenom>J.J.</prenom>
+            </personne>
+            <fixe>773</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>CORRE</nom>
+                <prenom>M.</prenom>
+            </personne>
+            <personne>
+                <nom>BATHANY</nom>
+                <prenom>N.</prenom>
+            </personne>
+            <personne>
+                <nom>MORVAN</nom>
+                <prenom>F.</prenom>
+            </personne>
+            <fixe>774</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>GOUENNOU</nom>
+                <prenom>G.</prenom>
+            </personne>
+            <personne>
+                <nom>JEULAND</nom>
+                <prenom>P.</prenom>
+            </personne>
+            <personne>
+                <nom>LOUEDEC</nom>
+                <prenom>F.</prenom>
+            </personne>
+            <fixe>134</fixe>
         </contact>
     </pole1>
     
@@ -64,30 +116,78 @@
         <contact>
             <poste>Directeur Général</poste>
             <personne>
-                <nom>Landry</nom>
+                <nom>LANDRY</nom>
                 <prenom>Philippe</prenom>
             </personne>
             <fixe>763</fixe>
-            <portable>0665118729</portable>
+            <portable>06 65 11 87 29</portable>
         </contact>
         <pole2>
             <intitule>Secrétariat Général - Légalité</intitule>
-            <fax>0298375750</fax>
+            <fax>02 98 37 57 50</fax>
             <contact>
                 <personne>
-                    <nom>Martin</nom>
+                    <nom>MARTIN</nom>
                     <prenom>Véronique</prenom>
                 </personne>
                 <fixe>747</fixe>
             </contact>
             <contact>
                 <personne>
-                    <nom>Sébille</nom>
+                    <nom>SEBILLE</nom>
                     <prenom>Stéphanie</prenom>
                 </personne>
                 <fixe>764</fixe>
             </contact>
         </pole2>
+        <pole2>
+            <intitule>Police municipale</intitule>
+            <contact>
+                <personne>
+                    <nom>MAUGUEN</nom>
+                    <prenom>Rolland</prenom>
+                </personne>
+                <fixe>755</fixe>
+                <portabe>06 08 99 75 52</portabe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Pôle Ressources Humaines</intitule>
+            <contact>
+                <poste>Directrice</poste>
+                <personne>
+                    <nom>MALLEGOL</nom>
+                    <prenom>Marlène</prenom>
+                </personne>
+                <fixe>791</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>SALAUN</nom>
+                    <prenom>Agnès</prenom>
+                </personne>
+                <fixe>775</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>LEGRAND</nom>
+                    <prenom>Alexandre</prenom>
+                </personne>
+                <fixe>796</fixe>
+            </contact>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Finances Administration Générale</intitule>
+        <contact>
+            <poste>Directrice</poste>
+            <personne>
+                <nom>QUENTEL</nom>
+                <prenom>Anne</prenom>
+            </personne>
+            <fixe>785</fixe>
+        </contact>
     </pole1>
     
 </annuaire>
