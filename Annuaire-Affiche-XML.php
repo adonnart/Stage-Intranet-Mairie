@@ -8,16 +8,12 @@
 		foreach($pole as $contact){
 			if (!empty($contact->personne)){
 				echo "<tr>";
-				echo "<td>";
+				echo "<td class='pers'>";
 				foreach($contact as $personne){
 					if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom; }
 				}
 				if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
 				echo "</td>";
-				
-				/*if (!empty($contact->fixe)){ echo "<td>".$contact->fixe."</td>"; }*/
-				/*if (!empty($contact->portable)){ echo "<td>".$contact->portable."</td>"; }*/
-				
 				if ((!empty($contact->fixe)) and (empty($contact->portable))){
 					echo "<td class='nb'>".$contact->fixe."</td>";
 				}else if ((empty($contact->fixe)) and (!empty($contact->portable))){
@@ -26,9 +22,6 @@
 					echo "<td class='nbs'>".$contact->fixe.
 					"</td><td class='nbs'>".$contact->portable."</td>";
 				}
-				
-				//echo "</td>";
-				
 				echo "</tr>";
 			}
 		}
