@@ -19,6 +19,5 @@
 				if ($contact->portable != ""){ echo $contact->portable."<br/>"; }
 			}
 		}
-		echo "<br/>";
 	}
 ?>
