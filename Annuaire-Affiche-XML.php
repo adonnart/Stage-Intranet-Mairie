@@ -27,7 +27,7 @@
 	foreach($xml->children() as $pole){
 		echo $pole->intitule."<br/>";
 		foreach($pole->children() as $contact){
-			echo $nom."<br/>";
+			echo $contact->nom."<br/>";
 			echo $contact->prenom."<br/>";
 		}
 	}
