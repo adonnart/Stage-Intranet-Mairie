@@ -1,3 +1,4 @@
+{source}
 <html><head><title>Annuaire</title><link rel="stylesheet" content="text/css" href="Annuaire/Annuaire-XML.css" /></head><body>
 <?php
 	function afficheContacts($pole){
@@ -5,22 +6,16 @@
 		if (!empty($pole->fax)){ echo "<tr><td>".$pole->fax."</td></tr>"; }
 		echo "<tr>";
 		foreach($pole as $contact){
-			echo "<tr>";
-			if (!empty($contact->poste)){	echo "<td><i>".$contact->poste."</i></td>"; }
+			//echo "<tr>";
 			echo "<td>";
 			foreach($contact as $personne){
-				cpt=1;
-				//if (!empty($contact->personne)){ }
-				echo $personne->prenom." ".$personne->nom;
-				if (cpt!=1){ echo ", "; }
-				cpt+=1;
+				if (!empty($personne->prenom)){ echo $personne->prenom." ".$personne->nom." "; }
 			}
+			if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
 			echo "</td>";
-			//if (!empty($contact->fixe)){ }
-			echo "<td>".$contact->fixe."</td>";
-			//if (!empty($contact->portable)){ }
-			echo "<td>".$contact->portable."</td>";
-			echo "</tr>";
+			if (!empty($contact->fixe)){ echo "<td>".$contact->fixe."</td>"; }
+			if (!empty($contact->portable)){ echo "<td>".$contact->portable."</td>"; }
+			//echo "</tr>";
 		}
 		echo "</tr>";
 	}
@@ -38,3 +33,4 @@
 		echo "</table><br/>";
 	}
 ?></body></html>
+{/source}
