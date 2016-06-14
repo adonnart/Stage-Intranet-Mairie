@@ -2,7 +2,7 @@
 	function afficheContacts($pole){
 		foreach($pole as $contact){
 			echo "<p>";
-			if ($contact->poste != ""){ echo "<b style='color:red;'>".$contact->poste."</b>"; }
+			if ($contact->poste != ""){ echo "<i style='color:red;'>".$contact->poste."</i><br/>"; }
 			echo $contact->prenom." ".$contact->nom."<br/>";
 			if ($contact->fixe != ""){ echo $contact->fixe."<br/>"; }
 			if ($contact->portable != ""){ echo $contact->portable."<br/>"; }
