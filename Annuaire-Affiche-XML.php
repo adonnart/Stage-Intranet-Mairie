@@ -10,7 +10,7 @@
 			if ($contact->portable != ""){ echo $contact->portable."<br/>"; }
 			echo "<br/>";
 		}
-		if ($pole2){
+		if isset($pole2){
 			foreach($pole1 as $pole2){
 				echo "<b>".$pole2->intitule."</b>";
 				if ($pole2->fax != ""){ echo $pole2->fax."<br/>"; }
