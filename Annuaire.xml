@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
 <!DOCTYPE annuaire [
-    <!ELEMENT pole (intitule, fax?, pole*, contact*)>
+    <!ELEMENT annuaire (pole1*)>
+
+    <!ELEMENT pole1 (intitule, fax?, contact*, pole2*, )>
+    <!ELEMENT pole2 (intitule, fax?, contact*)>
+    
     <!ELEMENT intitule (#PCDATA)>
     <!ELEMENT fax (#PCDATA)>
 
@@ -15,7 +19,7 @@
 
 <annuaire>
     
-    <pole>
+    <pole1>
         <intitule>Elus municipaux</intitule>
         <contact>
             <nom>Cap</nom>
@@ -29,9 +33,9 @@
             <fixe>789</fixe>
             <poste>Directeur de cabinet</poste>
         </contact>
-    </pole>
+    </pole1>
     
-    <pole>
+    <pole1>
         <intitule>Adjoints et conseillers délégués</intitule>
         <contact>
             <nom>Henaff</nom>
@@ -43,9 +47,9 @@
             <prenom>Bernard</prenom>
             <fixe>716</fixe>
         </contact>
-    </pole>
+    </pole1>
     
-    <pole>
+    <pole1>
         <intitule>Pôle Direction Générale</intitule>
         <contact>
             <nom>Landry</nom>
@@ -54,7 +58,7 @@
             <portable>0665118729</portable>
             <poste>Directeur Général</poste>
         </contact>
-        <pole>
+        <pole2>
             <intitule>Secrétariat Général - Légalité</intitule>
             <fax>0298375750</fax>
             <contact>
@@ -67,7 +71,7 @@
                 <prenom>Stéphanie</prenom>
                 <fixe>764</fixe>
             </contact>
-        </pole>
-    </pole>
+        </pole2>
+    </pole1>
     
 </annuaire>
