@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Annuaire</title>
-		<link rel="stylesheet" content="text/css" href="templates/protostar/css/template.css" />
+		<link rel="stylesheet" content="text/css" href="Annuaire/Annuaire-XML.css" />
 	</head>
 	<body>
 	<?php
