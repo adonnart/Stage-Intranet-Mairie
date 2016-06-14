@@ -15,13 +15,14 @@
 				if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
 				echo "</td>";
 				
-				/*if (!empty($contact->fixe)){ */echo "<td>".$contact->fixe."</td>";/* }*/
-				/*if (!empty($contact->portable)){ */echo "<td>".$contact->portable."</td>";/* }*/
+				/*if (!empty($contact->fixe)){ echo "<td>".$contact->fixe."</td>"; }*/
+				/*if (!empty($contact->portable)){ echo "<td>".$contact->portable."</td>"; }*/
 				
-				if (empty($contact->fixe) and !empty($contact->portable)){
-					echo "<td>".$contact->fixe."</td>";
-				}else if (!empty($contact->fixe) and empty($contact->portable)){
-					
+				echo "<td>";
+				if (!empty($contact->fixe) and empty($contact->portable)){ echo $contact->fixe;
+				}else if (empty($contact->fixe) and !empty($contact->portable)){ echo $contact->portable;
+				}else{ echo $contact->fixe.$contact->portable; }
+				echo "</td>";
 					
 				if (!empty($contact->portable)){ */echo "<td>".$contact->portable."</td>"; }
 				
