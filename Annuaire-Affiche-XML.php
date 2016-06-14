@@ -21,14 +21,14 @@
 		$xml = simplexml_load_file('Annuaire/Annuaire-XML.xml') or die("Fichier introuvable.");
 		
 		foreach($xml as $pole1){
-			echo "<table>";
+			echo "<br/><table>";
 			afficheContacts($pole1);
 			foreach($pole1 as $pole2){
 				if (property_exists($pole1,'pole2')){
 					afficheContacts($pole2);
 				}
 			}
-			echo "</table>";
+			echo "</table><br/>";
 		}
 	?>
 	</body>
