@@ -4,20 +4,18 @@
 	function afficheContacts($pole){
 		echo "<caption>".$pole->intitule."</caption>";
 		if (!empty($pole->fax)){ echo "<tr><td>".$pole->fax."</td></tr>"; }
-		echo "<tr>";
 		foreach($pole as $contact){
-			//echo "<tr>";
+			echo "<tr>";
 			echo "<td>";
 			foreach($contact as $personne){
-				if (!empty($personne->prenom)){ echo $personne->prenom." ".$personne->nom." "; }
+				if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom." "; }
 			}
 			if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
 			echo "</td>";
 			if (!empty($contact->fixe)){ echo "<td>".$contact->fixe."</td>"; }
 			if (!empty($contact->portable)){ echo "<td>".$contact->portable."</td>"; }
-			//echo "</tr>";
+			echo "</tr>";
 		}
-		echo "</tr>";
 	}
 	
 	$xml = simplexml_load_file('Annuaire/Annuaire-XML.xml') or die("Fichier introuvable.");
