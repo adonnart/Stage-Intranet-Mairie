@@ -3,13 +3,13 @@
 <!DOCTYPE annuaire [
     <!ELEMENT annuaire (pole1+)>
 
-    <!ELEMENT pole1 (intitule, fax?, contact*, pole2*)>
+    <!ELEMENT pole1 (intitule, fax?, contact+, pole2*)>
     <!ELEMENT pole2 (intitule, fax?, contact*)>
     
     <!ELEMENT intitule (#PCDATA)>
     <!ELEMENT fax (#PCDATA)>
     
-    <!ELEMENT personne (nom, prenom)>
+    <!ELEMENT personne (nom, prenom?)>
     <!ELEMENT nom (#PCDATA)>
     <!ELEMENT prenom (#PCDATA)>
     
@@ -257,6 +257,98 @@
                 <fixe>135</fixe>
             </contact>
         </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Aménagement Urbanisme et Patrimoine / Travaux</intitule>
+        <contact>
+            <poste>Directeur</poste>
+            <personne>
+                <nom>ALIX</nom>
+                <prenom>Roger</prenom>
+            </personne>
+            <fixe>762</fixe>
+        </contact>
+        <pole2>
+            <intitule>Travaux</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Urbanisme</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Atelier communal</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Communication, Culture, Vie associative, Animations et Sport</intitule>
+        <contact>
+            <poste>Directeur</poste>
+            <personne>
+                <nom>DIGAIRE</nom>
+                <prenom>Eric</prenom>
+            </personne>
+            <fixe>731</fixe>
+        </contact>
+        <pole2>
+            <intitule>Communication</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Espace Avel Vor Culture / Vie asso</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Médiathèque</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Sport</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Education et Action sociale</intitule>
+        <contact>
+            <poste>Directrice</poste>
+            <personne>
+                <nom>PERES</nom>
+                <prenom>Nicole/prenom>
+            </personne>
+            <fixe>770</fixe>
+        </contact>
+        <pole2>
+            <intitule>Vie scolaire / Enfance</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Jeunesse</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Maison de la solidarité</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Maison de l’enfance</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Centres de loisirs</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Salles</intitule>
+        <contact>
+            <personne>
+                <nom>Salle de repos / Archives</nom>
+            </personne>
+            <fixe>139</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Numéros utiles</intitule>
+        <contact>
+            <personne>
+                <nom>Asso. 7 Calvaires Corentin BOURGOIS</nom>
+            </personne>
+            <fixe>786</fixe>
+        </contact>
     </pole1>
     
 </annuaire>
