@@ -119,8 +119,8 @@
                 <nom>LANDRY</nom>
                 <prenom>Philippe</prenom>
             </personne>
-            <fixe>763</fixe>
             <portable>06 65 11 87 29</portable>
+            <fixe>763</fixe>
         </contact>
         <pole2>
             <intitule>Secrétariat Général - Légalité</intitule>
@@ -147,8 +147,8 @@
                     <nom>MAUGUEN</nom>
                     <prenom>Rolland</prenom>
                 </personne>
-                <fixe>755</fixe>
                 <portabe>06 08 99 75 52</portabe>
+                <fixe>755</fixe>
             </contact>
         </pole2>
         <pole2>
@@ -188,6 +188,75 @@
             </personne>
             <fixe>785</fixe>
         </contact>
+        <pole2>
+            <intitule>Finances / Comptabilité</intitule>
+            <contact>
+                <personne>
+                    <nom>JOURDEN</nom>
+                    <prenom>Jean-Claude</prenom>
+                </personne>
+                <fixe>756</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>SIMON</nom>
+                    <prenom>Béatrice</prenom>
+                </personne>
+                <fixe>768</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Marchés publics / Assurance</intitule>
+            <contact>
+                <personne>
+                    <nom>FOLL</nom>
+                    <prenom>Fanny</prenom>
+                </personne>
+                <fixe>784</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Population</intitule>
+            <fax>02 98 37 57 53</fax>
+            <contact>
+                <personne>
+                    <nom>VIELLE-CARRE</nom>
+                    <prenom>Axelle</prenom>
+                </personne>
+                <fixe>757</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>LE GALL</nom>
+                    <prenom>Bernadette</prenom>
+                </personne>
+                <fixe>737</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>TRICHET</nom>
+                    <prenom>Geneviève</prenom>
+                </personne>
+                <fixe>754</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Informatique</intitule>
+            <contact>
+                <personne>
+                    <nom>WOLFF</nom>
+                    <prenom>Jérôme</prenom>
+                </personne>
+                <fixe>788</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>LE BARS</nom>
+                    <prenom>Bernard</prenom>
+                </personne>
+                <fixe>135</fixe>
+            </contact>
+        </pole2>
     </pole1>
     
 </annuaire>
