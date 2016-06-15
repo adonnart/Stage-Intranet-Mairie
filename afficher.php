@@ -12,7 +12,7 @@
 				else { echo "<td class='pers' colspan=2>"; }
 				
 				foreach($contact as $personne){
-					if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom." - "; }
+					if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom." "; }
 				}
 				
 				if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
