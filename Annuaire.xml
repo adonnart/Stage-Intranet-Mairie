@@ -2,16 +2,22 @@
 
 <!DOCTYPE annuaire [
     <!ELEMENT annuaire (pole1+)>
+    
     <!ELEMENT pole1 (intitule, contact+, pole2*)>
     <!ELEMENT pole2 (intitule, fax?, contact*)>
-        <!ELEMENT intitule (#PCDATA)>
-        <!ELEMENT fax (#PCDATA)>
-            <!ELEMENT contact (poste?, personne+, numero+)>
-            <!ELEMENT poste (#PCDATA)>
-            <!ELEMENT personne (nom, prenom?)>
-                <!ELEMENT nom (#PCDATA)>
-                <!ELEMENT prenom (#PCDATA)>
-            <!ELEMENT numero (#PCDATA)>
+    
+    <!ELEMENT intitule (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+    
+    <!ELEMENT contact (poste?, personne+, numeros)>
+    <!ELEMENT poste (#PCDATA)>
+    
+    <!ELEMENT numeros (numero+)>
+    <!ELEMENT numero (#PCDATA)>
+    
+    <!ELEMENT personne (nom, prenom?)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT prenom (#PCDATA)>
 ]>
 
 <annuaire>
@@ -24,7 +30,9 @@
                 <nom>CAP</nom>
                 <prenom>Dominique</prenom>
             </personne>
-            <numero>765</numero>
+            <numeros>
+                <numero>765</numero>
+            <numeros>
         </contact>
         <contact>
             <poste>Directeur de cabinet</poste>
@@ -32,7 +40,9 @@
                 <nom>LE ROUX</nom>
                 <prenom>Allain</prenom>
             </personne>
-            <numero>789</numero>
+            <numeros>
+                <numero>789<numero>
+            </numeros>
         </contact>
     </pole1>
     
@@ -43,14 +53,18 @@
                 <nom>HENAFF</nom>
                 <prenom>Patricia</prenom>
             </personne>
-            <numero>767</numero>
+            <numeros>
+                <numero>767</numero>
+            </numeros>
         </contact>
         <contact>
             <personne>
                 <nom>NICOLAS</nom>
                 <prenom>Bernard</prenom>
             </personne>
-            <numero>716</numero>
+            <numeros>
+                <numero>716</numero>
+            </numeros>
         </contact>
         <contact>
             <personne>
@@ -61,7 +75,9 @@
                 <nom>de CADENET</nom>
                 <prenom>B</prenom>
             </personne>
-            <numero>702</numero>
+            <numeros>
+                <numero>702</numero>
+            </numeros>
         </contact>
         <contact>
             <personne>
