@@ -12,7 +12,7 @@
     <!ELEMENT contact (poste?, personne+, numeros)>
     <!ELEMENT poste (#PCDATA)>
     
-    <!ELEMENT numeros (numero+)>
+    <!ELEMENT numeros (num+)>
     <!ELEMENT num (#PCDATA)>
     
     <!ELEMENT personne (nom, prenom?)>
@@ -41,7 +41,7 @@
                 <prenom>Allain</prenom>
             </personne>
             <numeros>
-                <num>789<num>
+                <num>789</num>
             </numeros>
         </contact>
     </pole1>
