@@ -13,7 +13,7 @@
     <!ELEMENT nom (#PCDATA)>
     <!ELEMENT prenom (#PCDATA)>
     
-    <!ELEMENT contact (poste?, personne+, portable?, fixe?)>
+    <!ELEMENT contact (poste?, personne+, portable?, fixe)>
     <!ELEMENT portable (#PCDATA)>
     <!ELEMENT fixe (#PCDATA)>
     <!ELEMENT poste (#PCDATA)>
