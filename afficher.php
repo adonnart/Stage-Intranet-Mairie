@@ -1,6 +1,6 @@
 {source}
 <html>
-<head><title>Annuaire</title><link rel="stylesheet" content="text/css" href="Annuaire/Annuaire-XML.css" /></head>
+<head><title>Annuaire</title><link rel="stylesheet" content="text/css" href="annuaire/annuaire.css" /></head>
 <body>
 <?php
 function afficheContacts($pole){
@@ -12,7 +12,7 @@ function afficheContacts($pole){
 			else { echo "<td class='pers' colspan=2>"; }
 			
 			foreach($contact as $personne){
-				if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom; }
+				if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom." - "; }
 			}
 			
 			if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
