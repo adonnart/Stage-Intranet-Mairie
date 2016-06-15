@@ -2,22 +2,21 @@
 
 <!DOCTYPE annuaire [
     <!ELEMENT annuaire (pole1+)>
-    
-    <!ELEMENT pole1 (intitule, contact+, pole2*)>
+
+    <!ELEMENT pole1 (intitule, fax?, contact+, pole2*)>
     <!ELEMENT pole2 (intitule, fax?, contact*)>
     
     <!ELEMENT intitule (#PCDATA)>
     <!ELEMENT fax (#PCDATA)>
     
-    <!ELEMENT contact (poste?, personne+, numeros)>
-    <!ELEMENT poste (#PCDATA)>
-    
-    <!ELEMENT numeros (num+)>
-    <!ELEMENT num (#PCDATA)>
-    
     <!ELEMENT personne (nom, prenom?)>
     <!ELEMENT nom (#PCDATA)>
     <!ELEMENT prenom (#PCDATA)>
+    
+    <!ELEMENT contact (poste?, personne+, portable?, fixe)>
+    <!ELEMENT portable (#PCDATA)>
+    <!ELEMENT fixe (#PCDATA)>
+    <!ELEMENT poste (#PCDATA)>
 ]>
 
 <annuaire>
@@ -30,9 +29,7 @@
                 <nom>CAP</nom>
                 <prenom>Dominique</prenom>
             </personne>
-            <numeros>
-                <num>765</num>
-            </numeros>
+            <fixe>765</fixe>
         </contact>
         <contact>
             <poste>Directeur de cabinet</poste>
@@ -40,9 +37,7 @@
                 <nom>LE ROUX</nom>
                 <prenom>Allain</prenom>
             </personne>
-            <numeros>
-                <num>789</num>
-            </numeros>
+            <fixe>789</fixe>
         </contact>
     </pole1>
     
@@ -53,18 +48,14 @@
                 <nom>HENAFF</nom>
                 <prenom>Patricia</prenom>
             </personne>
-            <numeros>
-                <num>767</num>
-            </numeros>
+            <fixe>767</fixe>
         </contact>
         <contact>
             <personne>
                 <nom>NICOLAS</nom>
                 <prenom>Bernard</prenom>
             </personne>
-            <numeros>
-                <num>716</num>
-            </numeros>
+            <fixe>716</fixe>
         </contact>
         <contact>
             <personne>
@@ -75,9 +66,7 @@
                 <nom>de CADENET</nom>
                 <prenom>B</prenom>
             </personne>
-            <numeros>
-                <num>702</num>
-            </numeros>
+            <fixe>702</fixe>
         </contact>
         <contact>
             <personne>
@@ -88,9 +77,7 @@
                 <nom>ANDRE</nom>
                 <prenom>J.J.</prenom>
             </personne>
-            <numeros>
-                <num>773</num>
-            </numeros>
+            <fixe>773</fixe>
         </contact>
         <contact>
             <personne>
@@ -105,9 +92,7 @@
                 <nom>MORVAN</nom>
                 <prenom>F.</prenom>
             </personne>
-            <numeros>
-                <num>774</num>
-            </numeros>
+            <fixe>774</fixe>
         </contact>
         <contact>
             <personne>
@@ -122,9 +107,7 @@
                 <nom>LOUEDEC</nom>
                 <prenom>F.</prenom>
             </personne>
-            <numeros>
-                <num>134</num>
-            </numeros>
+            <fixe>134</fixe>
         </contact>
     </pole1>
     
@@ -136,10 +119,8 @@
                 <nom>LANDRY</nom>
                 <prenom>Philippe</prenom>
             </personne>
-            <numeros>
-                <num>06 65 11 87 29</num>
-                <num>763</num>
-            </numeros>
+            <portable>06 65 11 87 29</portable>
+            <fixe>763</fixe>
         </contact>
         <pole2>
             <intitule>Secrétariat Général - Légalité</intitule>
@@ -149,18 +130,14 @@
                     <nom>MARTIN</nom>
                     <prenom>Véronique</prenom>
                 </personne>
-                <numeros>
-                    <num>747</num>
-                </numeros>
+                <fixe>747</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>SEBILLE</nom>
                     <prenom>Stéphanie</prenom>
                 </personne>
-                <numeros>
-                    <num>764</num>
-                </numeros>
+                <fixe>764</fixe>
             </contact>
         </pole2>
         <pole2>
@@ -170,10 +147,8 @@
                     <nom>MAUGUEN</nom>
                     <prenom>Rolland</prenom>
                 </personne>
-                <numeros>
-                    <num>06 08 99 75 52</num>
-                    <num>755</num>
-                </numeros>
+                <portable>06 08 99 75 52</portable>
+                <fixe>755</fixe>
             </contact>
         </pole2>
         <pole2>
@@ -184,27 +159,21 @@
                     <nom>MALLEGOL</nom>
                     <prenom>Marlène</prenom>
                 </personne>
-                <numeros>
-                    <num>791</num>
-                </numeros>
+                <fixe>791</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>SALAUN</nom>
                     <prenom>Agnès</prenom>
                 </personne>
-                <numeros>
-                    <num>775</num>
-                </numeros>
+                <fixe>775</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>LEGRAND</nom>
                     <prenom>Alexandre</prenom>
                 </personne>
-                <numeros>
-                    <num>796</num>
-                </numeros>
+                <fixe>796</fixe>
             </contact>
         </pole2>
     </pole1>
@@ -217,9 +186,7 @@
                 <nom>QUENTEL</nom>
                 <prenom>Anne</prenom>
             </personne>
-            <numeros>
-                <num>785</num>
-            </numeros>
+            <fixe>785</fixe>
         </contact>
         <pole2>
             <intitule>Finances / Comptabilité</intitule>
@@ -228,18 +195,14 @@
                     <nom>JOURDEN</nom>
                     <prenom>Jean-Claude</prenom>
                 </personne>
-                <numeros>
-                    <num>756</num>
-                </numeros>
+                <fixe>756</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>SIMON</nom>
                     <prenom>Béatrice</prenom>
                 </personne>
-                <numeros>
-                    <num>768</num>
-                </numeros>
+                <fixe>768</fixe>
             </contact>
         </pole2>
         <pole2>
@@ -249,9 +212,7 @@
                     <nom>FOLL</nom>
                     <prenom>Fanny</prenom>
                 </personne>
-                <numeros>
-                    <num>784</num>
-                </numeros>
+                <fixe>784</fixe>
             </contact>
         </pole2>
         <pole2>
@@ -262,27 +223,21 @@
                     <nom>VIELLE-CARRE</nom>
                     <prenom>Axelle</prenom>
                 </personne>
-                <numeros>
-                    <num>757</num>
-                </numeros>
+                <fixe>757</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>LE GALL</nom>
                     <prenom>Bernadette</prenom>
                 </personne>
-                <numeros>
-                    <num>737</num>
-                </numeros>
+                <fixe>737</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>TRICHET</nom>
                     <prenom>Geneviève</prenom>
                 </personne>
-                <numeros>
-                    <num>754</num>
-                </numeros>
+                <fixe>754</fixe>
             </contact>
         </pole2>
         <pole2>
@@ -292,18 +247,14 @@
                     <nom>WOLFF</nom>
                     <prenom>Jérôme</prenom>
                 </personne>
-                <numeros>
-                    <num>788</num>
-                </numeros>
+                <fixe>788</fixe>
             </contact>
             <contact>
                 <personne>
                     <nom>LE BARS</nom>
                     <prenom>Bernard</prenom>
                 </personne>
-                <numeros>
-                    <num>135</num>
-                </numeros>
+                <fixe>135</fixe>
             </contact>
         </pole2>
     </pole1>
@@ -316,9 +267,7 @@
                 <nom>ALIX</nom>
                 <prenom>Roger</prenom>
             </personne>
-            <numeros>
-                <num>762</num>
-            </numeros>
+            <fixe>762</fixe>
         </contact>
         <pole2>
             <intitule>Travaux</intitule>
@@ -339,9 +288,7 @@
                 <nom>DIGAIRE</nom>
                 <prenom>Eric</prenom>
             </personne>
-            <numeros>
-                <num>731</num>
-            </numeros>
+            <fixe>731</fixe>
         </contact>
         <pole2>
             <intitule>Communication</intitule>
@@ -363,11 +310,9 @@
             <poste>Directrice</poste>
             <personne>
                 <nom>PERES</nom>
-                <prenom>Nicole</prenom>
+                <prenom>Nicole/prenom>
             </personne>
-            <numeros>
-                <num>770</num>
-            </numeros>
+            <fixe>770</fixe>
         </contact>
         <pole2>
             <intitule>Vie scolaire / Enfance</intitule>
@@ -392,9 +337,7 @@
             <personne>
                 <nom>Salle de repos / Archives</nom>
             </personne>
-            <numeros>
-                <num>139</num>
-            </numeros>
+            <fixe>139</fixe>
         </contact>
     </pole1>
     
@@ -404,9 +347,7 @@
             <personne>
                 <nom>Asso. 7 Calvaires Corentin BOURGOIS</nom>
             </personne>
-            <numeros>
-                <num>786</num>
-            </numeros>
+            <fixe>786</fixe>
         </contact>
     </pole1>
     
