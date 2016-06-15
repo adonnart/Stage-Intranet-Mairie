@@ -8,7 +8,11 @@
 		foreach($pole as $contact){
 			if (!empty($contact->personne)){
 				echo "<tr>";
-				echo "<td class='pers'>";
+				if (!empty($contact->portable)){
+					echo "<td class='pers'>";
+				}else{
+					echo "<td class='pers' colspan=2>";
+				}
 				foreach($contact as $personne){
 					if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom; }
 				}
@@ -23,7 +27,6 @@
 					echo "<td class='portable'>".$contact->portable.
 					"</td><td class='fixe'>".$contact->fixe."</td>";
 				}
-				*//*
 				echo "<td class='num'>";
 				if ((!empty($contact->fixe)) and (empty($contact->portable))){
 					echo $contact->fixe."</td>";
@@ -33,10 +36,12 @@
 					echo $contact->portable."</td><td class='num'>".$contact->fixe."</td>";
 				}
 				*/
-				echo "<td class='num'>";
-				if (!empty($contact->portable)){ echo $contact->portable."</td><td class='num'>"; }
-				if (!empty($contact->fixe)){ echo $contact->fixe."</td>"; }
-				echo "</tr>";
+				if (!empty($contact->portable)){ echo "<td class='port'>".$contact->portable."</td>"; }
+				if (!empty($contact->fixe)){
+					if (strlen($contact->fixe)<=3){ echo "<td class='fixe'>".$contact->fixe; }
+					else { echo "<td class='portable'>".$contact->fixe; }
+				}
+				echo "</td></tr>";
 			}
 		}
 	}
