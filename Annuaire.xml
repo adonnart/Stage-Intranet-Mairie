@@ -13,9 +13,9 @@
     <!ELEMENT nom (#PCDATA)>
     <!ELEMENT prenom (#PCDATA)>
     
-    <!ELEMENT contact (poste?, personne+, fixe?, portable?)>
-    <!ELEMENT fixe (#PCDATA)>
+    <!ELEMENT contact (poste?, personne+, portable?, fixe?)>
     <!ELEMENT portable (#PCDATA)>
+    <!ELEMENT fixe (#PCDATA)>
     <!ELEMENT poste (#PCDATA)>
 ]>
 
@@ -147,7 +147,7 @@
                     <nom>MAUGUEN</nom>
                     <prenom>Rolland</prenom>
                 </personne>
-                <portabe>06 08 99 75 52</portabe>
+                <portable>06 08 99 75 52</portable>
                 <fixe>755</fixe>
             </contact>
         </pole2>
