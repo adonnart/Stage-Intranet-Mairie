@@ -12,27 +12,29 @@ function afficheContacts($pole){
 			else { echo "<td class='pers' colspan=2>"; }
 			
 			foreach($contact as $personne){
-				if (!empty($personne->nom)){ echo " - ".$personne->prenom." ".$personne->nom; }
+				if (!empty($personne->nom)){ echo $personne->prenom." ".$personne->nom; }
 			}
 			
 			if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
 			echo "</td>";
-			/*
-			foreach($contact as $numero){
+			
+			foreach($contact as $numeros){
 				//if (!empty($contact->portable)){ echo "<td class='port'>".$contact->portable."</td>"; }
-				//if (!empty($contact->numero)){
-					echo "<td class='port'>".$numero->numero;
-					if (strlen($contact->numero)<=3){
+				if (!empty($numeros->num)){
+					echo "<td class='port'>".$numeros->num;
+					/*if (strlen($contact->numero)<=3){
 						echo "<td class='fixe'>".$contact->numero;
 					}else{
 						echo "<td class='port'>".$contact->numero;
-					}
+					}*/
 					echo "</td>";
-				//}
+				}
 			}
-			*/
-			if (!empty($contact->numero)){ echo "<td class='num'>".$contact->numero."</td>"; }
-			if (!empty($contact->numero)){ echo "<td class='num'>".$contact->numero."</td>"; }
+			
+			//foreach($contact as $numero){ echo "<td class='num'>".$contact->numero."</td>"; }
+			
+			//if (!empty($contact->numero)){ echo "<td class='num'>".$contact->numero."</td>"; }
+			//if (!empty($contact->numero)){ echo "<td class='num'>".$contact->numero."</td>"; }
 			
 			echo "</tr>";
 		}
