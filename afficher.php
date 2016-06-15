@@ -17,21 +17,6 @@ function afficheContacts($pole){
 			
 			if (!empty($contact->poste)){ echo " - <i>".$contact->poste."</i>"; }
 			echo "</td>";
-			/*
-			foreach($contact as $numeros){
-				//if (!empty($contact->portable)){ echo "<td class='port'>".$contact->portable."</td>"; }
-				if (!empty($numeros->num)){
-					echo "<td class='port'>".$numeros->num;
-					if (strlen($contact->numero)<=3){
-						echo "<td class='fixe'>".$contact->numero;
-					}else{
-						echo "<td class='port'>".$contact->numero;
-					}
-					echo "</td>";
-				}
-			}
-			*/
-			//foreach($contact as $numero){ echo "<td class='num'>".$contact->numero."</td>"; }
 			
 			if (!empty($contact->portable)){ echo "<td class='num'>".$contact->portable."</td>"; }
 			if (!empty($contact->fixe)){ echo "<td class='num'>".$contact->fixe."</td>"; }
@@ -41,7 +26,7 @@ function afficheContacts($pole){
 	}
 }
 
-$file = 'Annuaire/Annuaire-XML.xml';
+$file = 'annuaire/annuaire.xml';
 $xml = simplexml_load_file($file) or die("Fichier ".$file." introuvable.");
 ?>
 <!--<div class="bouton" align="right"><form action="Annuaire/modifier.php" method="get">
