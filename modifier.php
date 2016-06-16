@@ -36,6 +36,28 @@
 		<form action="modifContacts.php" method="get">
 			<input type="submit" value="Modifier"/>
 		</form>
+		
+{source}
+<html>
+	<!--<head></head>-->
+	<body>
+	<form action="modifier.php" method="get">
+        	<select size="1" id="pole1">
+			<option>Elus municipaux</option>
+			<option>Adjoints et conseillers délégués></option>
+			<option>Pôle Direction Générale</option>
+			<option>Pôle Finances Administration Générale</option>
+			<option></option>
+			<option></option>
+			<option></option>
+		</select>
+	<input type="submit" value="Modifier"/>
+	</form>
+	</body>
+</html>
+{/source}
+
+		
 		<?php
 			$dom = new DOMDocument();
 			//$dom->formatOutput = true;
@@ -53,6 +75,21 @@
 		
 			echo ''. $dom->saveXML() .'';
 			$dom->save('new_result.xml') or die('XML Manipulate Error');
+			/*
+			define('FICHIER', 'monfichier.xml');
+			$sxml = simplexml_load_file(FICHIER);
+			
+			foreach ($sxml->xpath('//listA[@id = "1"') as $n) {
+			    $n['valeur'] = 4;
+			    echo "Modif effectuée.<br/>"
+			}
+			
+			$n = $sxml->addChild('listB');
+			$n->addAttribute('id', 2);
+			$n->addAttribute('valeur', 2);
+			
+			$sxml->asXML(FICHIER);
+			*/
 		?>
 	</body>
 </html>
