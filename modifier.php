@@ -1,6 +1,6 @@
 {source}<html><!--<head></head>--><body>
 	
-	<form action="" method="get">
+	<form action="" method="post">
         	<select size="1" id="pole1">
 			<option>Elus municipaux</option>
 			<option>Adjoints et conseillers délégués></option>
