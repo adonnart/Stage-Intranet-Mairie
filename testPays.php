@@ -5,7 +5,7 @@
         $dom = new DOMDocument();
         $dom -> load($file);
 
-        $pays = $dom -> createElement('pays','Ukraine');
+        $pays = $dom -> createElement('pays','Russie');
         
         // Ajout de ce nouvel élément au fichier.
         $continent = $dom -> getElementsByTagName('europe') -> item(0);
