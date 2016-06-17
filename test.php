@@ -1,5 +1,28 @@
 <?php
-	$xml = simplexml_load_file('test.xml');
+	$dom = new DOMDocument();
+	$doc -> load('test.xml');
+	$root = $dom -> documentElement;
+
+	$listePays = $dom -> getElementsByTagName('pays');
+
+	foreach($listePays as $pays){
+		echo $pays -> firstChild -> nodeValue . "<br/>";
+	}
+
+	echo "---<br/>";
+
+	$europe = $dom -> getElementsByTagName('europe') -> item(0);
+	$listePaysEurope = $europe -> getElementsByTagName('pays');
+	foreach($listePaysEurope as $pays){
+		echo $pays -> firstChild -> nodeValue . "<br/>";
+	}
+
+	//$element = $dom -> createElement('test','This is the root');
+	//$dom -> appendChild($element);
+
+	//$dom -> save('test.xml');
+
+/*	$xml = simplexml_load_file('test.xml');
 	$movies = new SimpleXMLElement($xmlstr);
 	
 	$character = $movies->movie[0]->characters->addChild('character');
@@ -10,7 +33,7 @@
 	$rating->addAttribute('type', 'mpaa');
 	
 	echo $movies->asXML('test.xml');
-/*
+*//*
 	$xmlstr = simplexml_load_file('test.xml');
 	$movies = new SimpleXMLElement($xmlstr);
 	
