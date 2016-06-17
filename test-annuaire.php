@@ -1,29 +1,27 @@
 {source}<?php
 
-	$file = 'annuaire/tests.xml';
+	$file = 'annuaire/test-mille.xml';
 	$dom = new DOMDocument();
 	$dom -> load($file);
 	
+	//print_r $dom;
+	
 	echo "Fichier ouvert ?<br/><br/>";
+		
+	$pole = $dom -> getElementById('Jeunesse'); // -> item(0)
 
-	$new_personne = $dom -> createElement('personne');
-	$personne = $dom -> getElementsByTagName($new_personne) -> item(0);
-	
-	$nom = $dom -> createElement('nom','GILBERT');
-	$personne -> appendChild($nom);
-	        
-	$prenom = $dom -> createElement('prenom','Catherine');
-	$personne -> appendChild($prenom);
+	echo $pole;
 
-	$new_contact = $dom -> createElement('contact');
-	$contact = $dom -> getElementsByTagName($new_contact) -> item(0);
+	$contact = $dom -> createElement('contact');
+	//$contact = $dom -> getElementsByTagName($new_contact) -> item(0);
 
-	$portable = $dom -> createElement('portable','06 80 10 70 48');
-	$fixe = $dom -> createElement('fixe','743');
-	
+	$personne = $dom -> createElement('personne');
+	$personne -> appendChild(createElement('nom','GILBERT'));
+	$personne -> appendChild(createElement('prenom','Catherine'));
+
 	$contact -> appendChild($personne);
-	$contact -> appendChild($portable);
-	$contact -> appendChild($fixe);
+	$contact -> appendChild(createElement('portable','06 80 10 70 48'));
+	$contact -> appendChild(createElement('fixe','743'));
 	
 	echo "Contact créé ?<br/><br/>";
 /*      
@@ -37,8 +35,7 @@
         	<fixe>743</fixe>
         <contact>
 */
-	$new_intitule = 'Jeunesse';
-	$pole = $dom -> getElementsById($new_intitule) -> item(0);
+
 	//$pole = $intitule -> parentNode; // Récupère le noeud parent de l'intitulé : pole2.
 	$pole -> appendChild($contact);
         
