@@ -1,5 +1,6 @@
 {source}
-<!--<html><head></head><body>
+<html><head></head><body>
+<!--	
 	<form action="" method="post">
         	<select size="1" id="pole1">
 			<option>Elus municipaux</option>
@@ -14,26 +15,26 @@
 		</select>
 		<input type="submit" value="Modifier"/>
 	</form>
-	-->
+-->
 <?php
         // Ouverture du fichier.
         $file = 'annuaire/test-annuaire.xml';
         $dom = new DOMDocument();
         $dom -> load($file);
-	//$intitulePole = 'Jeunesse';
 	
 	// Création des noeuds parents
-        $new_contact = $dom -> createElement('contact');
-	$new_personne = $dom -> createElement('personne');
-	
-        $contact = $dom -> getElementsByTagName($new_contact) -> item(0);
-        $personne = $dom -> getElementsByTagName($new_personne) -> item(0);
 
+	$new_personne = $dom -> createElement('personne');
+	$personne = $dom -> getElementsByTagName($new_personne) -> item(0);
+	
 	$nom = $dom -> createElement('nom','GILBERT');
 	$prenom = $dom -> createElement('prenom','Catherine');
 	
         $personne -> appendChild($nom);
         $personne -> appendChild($prenom);
+        
+        $new_contact = $dom -> createElement('contact');
+	$contact = $dom -> getElementsByTagName($new_contact) -> item(0);
 
 	$portable = $dom -> createElement('portable','06 80 10 70 48');
 	$fixe = $dom -> createElement('fixe','743');
@@ -52,7 +53,8 @@
         	<fixe>743</fixe>
         <contact>
 */
-        $intitule = $dom -> getElementsByTagName('Jeunesse') -> item(0);
+	$new_intitule = 'Jeunesse';
+        $intitule = $dom -> getElementsByTagName($new_intitule) -> item(0);
         $pole = $intitule -> parentNode; // Récupère le noeud parent de l'intitulé : pole2.
         $pole -> appendChild($contact);
 /*      
@@ -72,8 +74,6 @@
         $liste = $dom -> getElementsByTagName('pole2');
         foreach ($liste as $tmp) { echo $tmp -> firstChild -> nodeValue . "<br/>"; }
         
-        //-> firstChild 
-        
         //$root = $dom -> documentElement;
         //$element = $dom -> createElement('test','This is the root');
         //$dom -> appendChild($element);
@@ -81,5 +81,5 @@
         // Sauvegarde du fichier.
         $dom -> save($file);
 ?>
-        
-<!--</body></html>-->{/source}
+</body></html>
+{/source}
