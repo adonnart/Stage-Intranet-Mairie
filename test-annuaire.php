@@ -1,5 +1,5 @@
 {source}
-<html><head></head><body>
+<html><body>
 <!--	
 	<form action="" method="post">
         	<select size="1" id="pole1">
@@ -18,7 +18,7 @@
 -->
 <?php
         // Ouverture du fichier.
-        $file = 'annuaire/test-annuaire.xml';
+        $file = 'annuaire/tests.xml';
         $dom = new DOMDocument();
         $dom -> load($file);
 	
