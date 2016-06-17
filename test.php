@@ -1,4 +1,6 @@
-<?php
+<html>
+	<body>
+	<?php
 	$dom = new DOMDocument();
 	$doc -> load('test.xml');
 	$root = $dom -> documentElement;
@@ -97,3 +99,4 @@
 	print $xml->saveXML();
 */
 ?>
+</body></html>
