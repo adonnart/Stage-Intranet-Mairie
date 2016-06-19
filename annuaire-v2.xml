@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE annuaire [
+    <!ELEMENT annuaire (pole1+)>
+
+    <!ELEMENT pole1 (intitule, fax?, contact+, pole2*)>
+    <!ELEMENT pole2 (intitule, fax?, contact*)>
+    
+    <!ELEMENT intitule (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+    
+    <!ELEMENT personne (nom, prenom?)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT prenom (#PCDATA)>
+    
+    <!ELEMENT contact (poste?, personne+, portable?, fixe)>
+    <!ELEMENT portable (#PCDATA)>
+    <!ELEMENT fixe (#PCDATA)>
+    <!ELEMENT poste (#PCDATA)>
+]>
+
+<annuaire>
+    
+    <pole1>
+        <intitule>Elus municipaux</intitule>
+        <contact>
+            <poste>Maire</poste>
+            <personne>
+                <nom>CAP</nom>
+                <prenom>Dominique</prenom>
+            </personne>
+            <fixe>765</fixe>
+        </contact>
+        <contact>
+            <poste>Directeur de cabinet</poste>
+            <personne>
+                <nom>LE ROUX</nom>
+                <prenom>Allain</prenom>
+            </personne>
+            <fixe>789</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Adjoints et conseillers délégués</intitule>
+        <contact>
+            <personne>
+                <nom>HENAFF</nom>
+                <prenom>Patricia</prenom>
+            </personne>
+            <fixe>767</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>NICOLAS</nom>
+                <prenom>Bernard</prenom>
+            </personne>
+            <fixe>716</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>TOULLEC</nom>
+                <prenom>J.-P.</prenom>
+            </personne>
+            <personne>
+                <nom>de CADENET</nom>
+                <prenom>B</prenom>
+            </personne>
+            <fixe>702</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>PAUGAM</nom>
+                <prenom>Michel</prenom>
+            </personne>
+            <personne>
+                <nom>ANDRE</nom>
+                <prenom>J.J.</prenom>
+            </personne>
+            <fixe>773</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>CORRE</nom>
+                <prenom>M.</prenom>
+            </personne>
+            <personne>
+                <nom>BATHANY</nom>
+                <prenom>N.</prenom>
+            </personne>
+            <personne>
+                <nom>MORVAN</nom>
+                <prenom>F.</prenom>
+            </personne>
+            <fixe>774</fixe>
+        </contact>
+        <contact>
+            <personne>
+                <nom>GOUENNOU</nom>
+                <prenom>G.</prenom>
+            </personne>
+            <personne>
+                <nom>JEULAND</nom>
+                <prenom>P.</prenom>
+            </personne>
+            <personne>
+                <nom>LOUEDEC</nom>
+                <prenom>F.</prenom>
+            </personne>
+            <fixe>134</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Direction Générale</intitule>
+        <contact>
+            <poste>Directeur Général</poste>
+            <personne>
+                <nom>LANDRY</nom>
+                <prenom>Philippe</prenom>
+            </personne>
+            <portable>06 65 11 87 29</portable>
+            <fixe>763</fixe>
+        </contact>
+        <pole2>
+            <intitule>Secrétariat Général - Légalité</intitule>
+            <fax>02 98 37 57 50</fax>
+            <contact>
+                <personne>
+                    <nom>MARTIN</nom>
+                    <prenom>Véronique</prenom>
+                </personne>
+                <fixe>747</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>SEBILLE</nom>
+                    <prenom>Stéphanie</prenom>
+                </personne>
+                <fixe>764</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Police municipale</intitule>
+            <contact>
+                <personne>
+                    <nom>MAUGUEN</nom>
+                    <prenom>Rolland</prenom>
+                </personne>
+                <portable>06 08 99 75 52</portable>
+                <fixe>755</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Pôle Ressources Humaines</intitule>
+            <contact>
+                <poste>Directrice</poste>
+                <personne>
+                    <nom>MALLEGOL</nom>
+                    <prenom>Marlène</prenom>
+                </personne>
+                <fixe>791</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>SALAUN</nom>
+                    <prenom>Agnès</prenom>
+                </personne>
+                <fixe>775</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>LEGRAND</nom>
+                    <prenom>Alexandre</prenom>
+                </personne>
+                <fixe>796</fixe>
+            </contact>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Finances Administration Générale</intitule>
+        <contact>
+            <poste>Directrice</poste>
+            <personne>
+                <nom>QUENTEL</nom>
+                <prenom>Anne</prenom>
+            </personne>
+            <fixe>785</fixe>
+        </contact>
+        <pole2>
+            <intitule>Finances / Comptabilité</intitule>
+            <contact>
+                <personne>
+                    <nom>JOURDEN</nom>
+                    <prenom>Jean-Claude</prenom>
+                </personne>
+                <fixe>756</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>SIMON</nom>
+                    <prenom>Béatrice</prenom>
+                </personne>
+                <fixe>768</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Marchés publics / Assurance</intitule>
+            <contact>
+                <personne>
+                    <nom>FOLL</nom>
+                    <prenom>Fanny</prenom>
+                </personne>
+                <fixe>784</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Population</intitule>
+            <fax>02 98 37 57 53</fax>
+            <contact>
+                <personne>
+                    <nom>VIELLE-CARRE</nom>
+                    <prenom>Axelle</prenom>
+                </personne>
+                <fixe>757</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>LE GALL</nom>
+                    <prenom>Bernadette</prenom>
+                </personne>
+                <fixe>737</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>TRICHET</nom>
+                    <prenom>Geneviève</prenom>
+                </personne>
+                <fixe>754</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Informatique</intitule>
+            <contact>
+                <personne>
+                    <nom>WOLFF</nom>
+                    <prenom>Jérôme</prenom>
+                </personne>
+                <fixe>788</fixe>
+            </contact>
+            <contact>
+                <personne>
+                    <nom>LE BARS</nom>
+                    <prenom>Bernard</prenom>
+                </personne>
+                <fixe>135</fixe>
+            </contact>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Aménagement Urbanisme et Patrimoine / Travaux</intitule>
+        <contact>
+            <poste>Directeur</poste>
+            <personne>
+                <nom>ALIX</nom>
+                <prenom>Roger</prenom>
+            </personne>
+            <fixe>762</fixe>
+        </contact>
+        <pole2>
+            <intitule>Travaux</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Urbanisme</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Atelier communal</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Communication, Culture, Vie associative, Animations et Sport</intitule>
+        <contact>
+            <poste>Directeur</poste>
+            <personne>
+                <nom>DIGAIRE</nom>
+                <prenom>Eric</prenom>
+            </personne>
+            <fixe>731</fixe>
+        </contact>
+        <pole2>
+            <intitule>Communication</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Espace Avel Vor Culture / Vie asso</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Médiathèque</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Sport</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Education et Action sociale</intitule>
+        <contact>
+            <poste>Directrice</poste>
+            <personne>
+                <nom>PERES</nom>
+                <prenom>Nicole</prenom>
+            </personne>
+            <fixe>770</fixe>
+        </contact>
+        <pole2>
+            <intitule>Vie scolaire / Enfance</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Jeunesse</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Maison de la solidarité</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Maison de l’enfance</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Centres de loisirs</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Salles</intitule>
+        <contact>
+            <personne>
+                <nom>Salle de repos / Archives</nom>
+            </personne>
+            <fixe>139</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Numéros utiles</intitule>
+        <contact>
+            <personne>
+                <nom>Asso. 7 Calvaires Corentin BOURGOIS</nom>
+            </personne>
+            <fixe>786</fixe>
+        </contact>
+    </pole1>
+    
+</annuaire>
