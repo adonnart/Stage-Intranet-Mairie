@@ -1,67 +1,46 @@
 {source}<?php
-
-	$file = 'annuaire/test-mille.xml';
+	
+	echo "Modification de l'annuaire...<br/>";
+	
+	$file = 'annuaire/test.xml';
 	$dom = new DOMDocument();
 	$dom -> load($file);
+	$dom -> validate();
 	
-	//print_r $dom;
+	echo "<br/>Fichier ouvert.<br/>";
 	
-	echo "Fichier ouvert ?<br/><br/>";
-		
-	$pole = $dom -> getElementById('Jeunesse'); // -> item(0)
-
-	echo $pole;
-
+	$poste = "none";
+	$nom = "Crèche";
+	$port = "02 98 00 00 00";
+	$fixe = "736";
+	
+	$idPole = "Jeunesse";
+	
 	$contact = $dom -> createElement('contact');
-	//$contact = $dom -> getElementsByTagName($new_contact) -> item(0);
-
-	$personne = $dom -> createElement('personne');
-	$personne -> appendChild(createElement('nom','GILBERT'));
-	$personne -> appendChild(createElement('prenom','Catherine'));
-
-	$contact -> appendChild($personne);
-	$contact -> appendChild(createElement('portable','06 80 10 70 48'));
-	$contact -> appendChild(createElement('fixe','743'));
 	
-	echo "Contact créé ?<br/><br/>";
-/*      
-	Résultat :
-	<contact>
-		<personne>
-                	<nom>GILBERT</nom>
-                	<prenom>Catherine</prenom>
-        	</personne>
-		<portable>06 80 10 70 48</portable>
-        	<fixe>743</fixe>
-        <contact>
-*/
+	/*if ($poste != "") { */$contact -> appendChild($dom -> createElement('poste',$poste));// }
+	/*if ($nom != "") { */$contact -> appendChild($dom -> createElement('nom',$nom));// }
+	/*if ($port != "") { */$contact -> appendChild($dom -> createElement('port',$port));// }
+	/*if ($fixe != "") { */$contact -> appendChild($dom -> createElement('fixe',$fixe));// }
 
-	//$pole = $intitule -> parentNode; // Récupère le noeud parent de l'intitulé : pole2.
-	$pole -> appendChild($contact);
-        
-	echo "Mis dans Jeunesse ?<br/><br/>";
-/*      
-	Résultat :
-	<pole2>
-		<contact>
-			<personne>
-	                	<nom>GILBERT</nom>
-	                	<prenom>Catherine</prenom>
-	        	</personne>
-			<portable>06 80 10 70 48</portable>
-	        	<fixe>743</fixe>
-	        <contact>
-        </pole2>
-*/
-	// Affichage de tous les éléments 'pays'.
+	$ids = $dom -> getElementsByTagName('id');
 	
-	echo "Liste ?<br/><br/>";
-        
-	$liste = $dom -> getElementsByTagName('pole2');
-	foreach ($liste as $tmp) { echo $tmp -> firstChild -> nodeValue . "<br/>"; }
+	$cpt = 0;
+	foreach($ids as $id){
+		$tmp = $ids -> item($cpt) -> nodeValue;
+		if (strcmp($tmp,$idPole) == 0) {
+			$parent = $ids -> item($cpt);
+			$pole = $parent -> parentNode;
+			//$pole = $ids -> item($cpt) -> parentNode;
+			$pole -> appendChild($contact);
+			var_dump($pole);
+			echo "<br/>Contact créé.<br/>";
+		}
+		$cpt++;
+	}
 
-	echo "Save ?<br/><br/>";
-	
 	$dom -> save($file);
+	
+	echo "<br/>Sauvegarde effectuée.<br/>";
 
 ?>{/source}
