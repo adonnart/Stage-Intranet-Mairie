@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE annuaire [
+    <!ELEMENT annuaire (pole1+)>
+
+    <!ELEMENT pole1 (intitule, fax?, contact+, pole2*)>
+    <!ELEMENT pole2 (intitule, fax?, contact*)>
+    
+    <!ELEMENT intitule (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+
+    <!ELEMENT contact (poste?, nom, portable?, fixe)>
+    <!ELEMENT poste (#PCDATA)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT portable (#PCDATA)>
+    <!ELEMENT fixe (#PCDATA)>
+]>
+
+<annuaire>
+    
+    <pole1>
+        <intitule>Elus municipaux</intitule>
+        <contact>
+            <poste>Maire</poste>
+            <nom>Dominique CAP</nom>
+            <fixe>765</fixe>
+        </contact>
+        <contact>
+            <poste>Directeur de cabinet</poste>
+            <nom>Allain LE ROUX</nom>
+            <fixe>789</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Adjoints et conseillers délégués</intitule>
+        <contact>
+            <nom>Patricia HENAFF</nom>
+            <fixe>767</fixe>
+        </contact>
+        <contact>
+            <nom>Bernard NICOLAS</nom>
+            <fixe>716</fixe>
+        </contact>
+        <contact>
+            <nom>J.-P. TOULLEC, B. de CADENET</nom>
+            <fixe>702</fixe>
+        </contact>
+        <contact>
+            <nom>Michel PAUGAM, J.J. ANDRE</nom>
+            <fixe>773</fixe>
+        </contact>
+        <contact>
+            <nom>M. CORRE, N. BATHANY, F. MORVAN</nom>
+            <fixe>774</fixe>
+        </contact>
+        <contact>
+            <nom>G. GOUENNOU, P. JEULAND, F. LOUEDEC</nom>
+            <fixe>134</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Direction Générale</intitule>
+        <contact>
+            <poste>Directeur Général</poste>
+            <nom>Philippe LANDRY</nom>
+            <portable>06 65 11 87 29</portable>
+            <fixe>763</fixe>
+        </contact>
+        <pole2>
+            <intitule>Secrétariat Général - Légalité</intitule>
+            <fax>02 98 37 57 50</fax>
+            <contact>
+                <nom>Véronique MARTIN</nom>
+                <fixe>747</fixe>
+            </contact>
+            <contact>
+                <nom>Stéphanie SEBILLE</nom>
+                <fixe>764</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Police municipale</intitule>
+            <contact>
+                <nom>Rolland MAUGUEN</nom>
+                <portable>06 08 99 75 52</portable>
+                <fixe>755</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Pôle Ressources Humaines</intitule>
+            <contact>
+                <poste>Directrice</poste>
+                <nom>Marlène MALLEGOL</nom>
+                <fixe>791</fixe>
+            </contact>
+            <contact>
+                <nom>Agnès SALAUN</nom>
+                <fixe>775</fixe>
+            </contact>
+            <contact>
+                <nom>Alexandre LEGRAND</nom>
+                <fixe>796</fixe>
+            </contact>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Finances Administration Générale</intitule>
+        <contact>
+            <poste>Directrice</poste>
+            <nom>Anne QUENTEL</nom>
+            <fixe>785</fixe>
+        </contact>
+        <pole2>
+            <intitule>Finances / Comptabilité</intitule>
+            <contact>
+                <nom>Jean-Claude JOURDEN</nom>
+                <fixe>756</fixe>
+            </contact>
+            <contact>
+                <nom>Béatrice SIMON</nom>
+                <fixe>768</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Marchés publics / Assurance</intitule>
+            <contact>
+                <nom>Fanny FOLL</nom>
+                <fixe>784</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Population</intitule>
+            <fax>02 98 37 57 53</fax>
+            <contact>
+                <nom>Axelle VIELLE-CARRE</nom>
+                <fixe>757</fixe>
+            </contact>
+            <contact>
+                <nom>Bernadette LE GALL</nom>
+                <fixe>737</fixe>
+            </contact>
+            <contact>
+                <nom>Geneviève TRICHET</nom>
+                <fixe>754</fixe>
+            </contact>
+        </pole2>
+        <pole2>
+            <intitule>Informatique</intitule>
+            <contact>
+                <nom>Jérôme WOLFF</nom>
+                <fixe>788</fixe>
+            </contact>
+            <contact>
+                <nom>Bernard LE BARS</nom>
+                <fixe>135</fixe>
+            </contact>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Aménagement Urbanisme et Patrimoine / Travaux</intitule>
+        <contact>
+            <poste>Directeur</poste>
+            <nom>Roger ALIX</nom>
+            <fixe>762</fixe>
+        </contact>
+        <pole2>
+            <intitule>Travaux</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Urbanisme</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Atelier communal</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Communication, Culture, Vie associative, Animations et Sport</intitule>
+        <contact>
+            <poste>Directeur</poste>
+            <nom>Eric DIGAIRE</nom>
+            <fixe>731</fixe>
+        </contact>
+        <pole2>
+            <intitule>Communication</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Espace Avel Vor Culture / Vie asso</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Médiathèque</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Sport</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Pôle Education et Action sociale</intitule>
+        <contact>
+            <poste>Directrice</poste>
+            <nom>Nicole PERES</nom>
+            <fixe>770</fixe>
+        </contact>
+        <pole2>
+            <intitule>Vie scolaire / Enfance</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Jeunesse</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Maison de la solidarité</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Maison de l’enfance</intitule>
+        </pole2>
+        <pole2>
+            <intitule>Centres de loisirs</intitule>
+        </pole2>
+    </pole1>
+    
+    <pole1>
+        <intitule>Salles</intitule>
+        <contact>
+            <nom>Salle de repos / Archives</nom>
+            <fixe>139</fixe>
+        </contact>
+    </pole1>
+    
+    <pole1>
+        <intitule>Numéros utiles</intitule>
+        <contact>
+            <nom>Asso. 7 Calvaires Corentin BOURGOIS</nom>
+            <fixe>786</fixe>
+        </contact>
+    </pole1>
+    
+</annuaire>
