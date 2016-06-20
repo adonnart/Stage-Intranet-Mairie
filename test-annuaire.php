@@ -2,7 +2,7 @@
 	
 	echo "Modification de l'annuaire...<br/>";
 	
-	$file = 'annuaire/test.xml';
+	$file = 'annuaire/test-v3.xml';
 	$dom = new DOMDocument();
 	$dom -> load($file);
 	$dom -> validate();
@@ -25,19 +25,36 @@
 
 	$ids = $dom -> getElementsByTagName('id');
 	
+	echo "<br/>Pôle recherché : ".$idPole."<br/>";
+	
 	$cpt = 0;
+/*
 	foreach($ids as $id){
 		$tmp = $ids -> item($cpt) -> nodeValue;
-		if (strcmp($tmp,$idPole) == 0) {
-			$parent = $ids -> item($cpt);
-			$pole = $parent -> parentNode;
-			//$pole = $ids -> item($cpt) -> parentNode;
-			$pole -> appendChild($contact);
-			var_dump($pole);
+		if ($tmp == $idPole) {
+			$pole = $ids -> item($cpt) -> parentNode;
+			//var_dump($pole);
+			echo "<br/>Contact créé.<br/>";
+		}
+		echo $cpt."<br/>".$tmp;
+		$cpt++;
+	}
+*/
+	$check = 0;
+	
+	while ($check == 0) {
+		$tmp = $ids -> item($cpt) -> nodeValue;
+		echo $cpt." - ".$tmp."<br/>";
+		if ($tmp == $idPole) {
+			$pole = $ids -> item($cpt) -> parentNode;
+			//var_dump($pole);
+			$check = 1;
 			echo "<br/>Contact créé.<br/>";
 		}
 		$cpt++;
 	}
+	
+	$pole -> appendChild($contact);
 
 	$dom -> save($file);
 	
