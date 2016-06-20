@@ -1,18 +1,17 @@
 {source}<?php
 	
-	echo "Modification de l'annuaire...<br/>";
-	
+	//Chargement
 	$file = 'annuaire/test-v3.xml';
-	$dom = new DOMDocument();
+	$dom = new DOMDocument('1.0');
+	$dom -> preserveWhiteSpace = false;
 	$dom -> load($file);
 	$dom -> validate();
+	echo "Fichier ouvert.<br/>";
 	
-	echo "<br/>Fichier ouvert.<br/>";
-	
-	$poste = "none";
-	$nom = "Crèche";
-	$port = "02 98 00 00 00";
-	$fixe = "736";
+	$poste	= "none";
+	$nom	= "Crèche";
+	$port	= "02 98 00 00 00";
+	$fixe	= "736";
 	
 	$idPole = "Jeunesse";
 	
@@ -56,8 +55,10 @@
 	
 	$pole -> appendChild($contact);
 
+	//Sauvegarde
+	$dom->formatOutput = true;
+	$dom->normalizeDocument();
 	$dom -> save($file);
-	
 	echo "<br/>Sauvegarde effectuée.<br/>";
 
 ?>{/source}
