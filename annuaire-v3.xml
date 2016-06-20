@@ -3,23 +3,23 @@
 <!DOCTYPE annuaire [
     <!ELEMENT annuaire (pole1+)>
 
-    <!ELEMENT pole1 (intitule, fax?, contact+, pole2*)>
-    <!ELEMENT pole2 (intitule, fax?, contact*)>
+    <!ELEMENT pole1 (id, fax?, contact+, pole2*)>
+    <!ELEMENT pole2 (id, fax?, contact*)>
     
-    <!ELEMENT intitule (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
     <!ELEMENT fax (#PCDATA)>
 
-    <!ELEMENT contact (poste?, nom, portable?, fixe)>
+    <!ELEMENT contact (poste?, nom, port?, fixe)>
     <!ELEMENT poste (#PCDATA)>
     <!ELEMENT nom (#PCDATA)>
-    <!ELEMENT portable (#PCDATA)>
+    <!ELEMENT port (#PCDATA)>
     <!ELEMENT fixe (#PCDATA)>
 ]>
 
 <annuaire>
     
     <pole1>
-        <intitule>Elus municipaux</intitule>
+        <id>Elus municipaux</id>
         <contact>
             <poste>Maire</poste>
             <nom>Dominique CAP</nom>
@@ -33,7 +33,7 @@
     </pole1>
     
     <pole1>
-        <intitule>Adjoints et conseillers délégués</intitule>
+        <id>Adjoints et conseillers délégués</id>
         <contact>
             <nom>Patricia HENAFF</nom>
             <fixe>767</fixe>
@@ -61,15 +61,15 @@
     </pole1>
     
     <pole1>
-        <intitule>Pôle Direction Générale</intitule>
+        <id>Pôle Direction Générale</id>
         <contact>
             <poste>Directeur Général</poste>
             <nom>Philippe LANDRY</nom>
-            <portable>06 65 11 87 29</portable>
+            <port>06 65 11 87 29</port>
             <fixe>763</fixe>
         </contact>
         <pole2>
-            <intitule>Secrétariat Général - Légalité</intitule>
+            <id>Secrétariat Général - Légalité</id>
             <fax>02 98 37 57 50</fax>
             <contact>
                 <nom>Véronique MARTIN</nom>
@@ -81,15 +81,15 @@
             </contact>
         </pole2>
         <pole2>
-            <intitule>Police municipale</intitule>
+            <id>Police municipale</id>
             <contact>
                 <nom>Rolland MAUGUEN</nom>
-                <portable>06 08 99 75 52</portable>
+                <port>06 08 99 75 52</port>
                 <fixe>755</fixe>
             </contact>
         </pole2>
         <pole2>
-            <intitule>Pôle Ressources Humaines</intitule>
+            <id>Pôle Ressources Humaines</id>
             <contact>
                 <poste>Directrice</poste>
                 <nom>Marlène MALLEGOL</nom>
@@ -107,14 +107,14 @@
     </pole1>
     
     <pole1>
-        <intitule>Pôle Finances Administration Générale</intitule>
+        <id>Pôle Finances Administration Générale</id>
         <contact>
             <poste>Directrice</poste>
             <nom>Anne QUENTEL</nom>
             <fixe>785</fixe>
         </contact>
         <pole2>
-            <intitule>Finances / Comptabilité</intitule>
+            <id>Finances / Comptabilité</id>
             <contact>
                 <nom>Jean-Claude JOURDEN</nom>
                 <fixe>756</fixe>
@@ -125,14 +125,14 @@
             </contact>
         </pole2>
         <pole2>
-            <intitule>Marchés publics / Assurance</intitule>
+            <id>Marchés publics / Assurance</id>
             <contact>
                 <nom>Fanny FOLL</nom>
                 <fixe>784</fixe>
             </contact>
         </pole2>
         <pole2>
-            <intitule>Population</intitule>
+            <id>Population</id>
             <fax>02 98 37 57 53</fax>
             <contact>
                 <nom>Axelle VIELLE-CARRE</nom>
@@ -148,7 +148,7 @@
             </contact>
         </pole2>
         <pole2>
-            <intitule>Informatique</intitule>
+            <id>Informatique</id>
             <contact>
                 <nom>Jérôme WOLFF</nom>
                 <fixe>788</fixe>
@@ -161,70 +161,70 @@
     </pole1>
     
     <pole1>
-        <intitule>Pôle Aménagement Urbanisme et Patrimoine / Travaux</intitule>
+        <id>Pôle Aménagement Urbanisme et Patrimoine / Travaux</id>
         <contact>
             <poste>Directeur</poste>
             <nom>Roger ALIX</nom>
             <fixe>762</fixe>
         </contact>
         <pole2>
-            <intitule>Travaux</intitule>
+            <id>Travaux</id>
         </pole2>
         <pole2>
-            <intitule>Urbanisme</intitule>
+            <id>Urbanisme</id>
         </pole2>
         <pole2>
-            <intitule>Atelier communal</intitule>
+            <id>Atelier communal</id>
         </pole2>
     </pole1>
     
     <pole1>
-        <intitule>Pôle Communication, Culture, Vie associative, Animations et Sport</intitule>
+        <id>Pôle Communication, Culture, Vie associative, Animations et Sport</id>
         <contact>
             <poste>Directeur</poste>
             <nom>Eric DIGAIRE</nom>
             <fixe>731</fixe>
         </contact>
         <pole2>
-            <intitule>Communication</intitule>
+            <id>Communication</id>
         </pole2>
         <pole2>
-            <intitule>Espace Avel Vor Culture / Vie asso</intitule>
+            <id>Espace Avel Vor Culture / Vie asso</id>
         </pole2>
         <pole2>
-            <intitule>Médiathèque</intitule>
+            <id>Médiathèque</id>
         </pole2>
         <pole2>
-            <intitule>Sport</intitule>
+            <id>Sport</id>
         </pole2>
     </pole1>
     
     <pole1>
-        <intitule>Pôle Education et Action sociale</intitule>
+        <id>Pôle Education et Action sociale</id>
         <contact>
             <poste>Directrice</poste>
             <nom>Nicole PERES</nom>
             <fixe>770</fixe>
         </contact>
         <pole2>
-            <intitule>Vie scolaire / Enfance</intitule>
+            <id>Vie scolaire / Enfance</id>
         </pole2>
         <pole2>
-            <intitule>Jeunesse</intitule>
+            <id>Jeunesse</id>
         </pole2>
         <pole2>
-            <intitule>Maison de la solidarité</intitule>
+            <id>Maison de la solidarité</id>
         </pole2>
         <pole2>
-            <intitule>Maison de l’enfance</intitule>
+            <id>Maison de l’enfance</id>
         </pole2>
         <pole2>
-            <intitule>Centres de loisirs</intitule>
+            <id>Centres de loisirs</id>
         </pole2>
     </pole1>
     
     <pole1>
-        <intitule>Salles</intitule>
+        <id>Salles</id>
         <contact>
             <nom>Salle de repos / Archives</nom>
             <fixe>139</fixe>
@@ -232,7 +232,7 @@
     </pole1>
     
     <pole1>
-        <intitule>Numéros utiles</intitule>
+        <id>Numéros utiles</id>
         <contact>
             <nom>Asso. 7 Calvaires Corentin BOURGOIS</nom>
             <fixe>786</fixe>
