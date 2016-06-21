@@ -1,5 +1,7 @@
 {source}<?php
 	
+	//Ajouter
+	
 	//Chargement
 	$file = 'annuaire/test-v3.xml';
 	$dom = new DOMDocument('1.0');
@@ -10,8 +12,8 @@
 	
 	$poste	= "";
 	$nom	= "truc";
-	$fixe	= "02 98 11 11 11";
 	$port	= "";
+	$fixe	= "02 98 11 11 11";
 	
 	$idPole = "Jeunesse";
 	
@@ -41,8 +43,6 @@
 		$cpt++;
 	}
 	
-	//$noms = $dom -> getElementsByTagName('nom');
-	
 	$pole -> appendChild($contact);
 
 	//Sauvegarde
@@ -50,5 +50,17 @@
 	$dom->normalizeDocument();
 	$dom -> save($file);
 	echo "<br/>Sauvegarde effectuée.<br/>";
+	
+	// Modifier
+	
+	$noms = $pole -> getElementsByTagName('nom');
+	
+	
+	/*
+	
+	- Ajouter un contact à la fin d'un pôle
+	- Remplacer un contact
+	
+	*/
 
 ?>{/source}
