@@ -5,13 +5,13 @@
 		<?php
 			function listeContacts($pole){
 				if (!empty($pole->id)){
-					echo "<li><input type='radio' name='r-id' id='.$pole->id.' />
+					echo "<li><input class='liste' type='radio' name='.$pole->id.' id='.$pole->id.' />
 					<label for='.$pole->id.'>".$pole->id."</label>";
 				}
 				echo "<ul class='liste'>";
 				foreach ($pole as $contact){
 					if (!empty($contact->nom)){
-						echo "<li><input type='radio' name='radio-name' id='.$contact->nom.' />
+						echo "<li><input class='saisie' type='radio' name='.$contact->nom.' id='.$contact->nom.' />
 						<label for='.$contact->nom.'>".$contact->nom."</label>";
 						// Saisie
 						echo "<ul class='saisie'>";
@@ -39,7 +39,7 @@
 			$xml = simplexml_load_file($file) or die("Fichier ".$file." introuvable.");
 		?>
 		
-		<!--<div class='modif'>-->
+		<div class='modif'>
 		<form action="" method="post">
 			<!--<input type="submit" value="Submit" /><input type="reset" value="Reset" />-->
 			<ul class='liste'>
@@ -59,7 +59,7 @@
 			?>
 			</li></ul>
 		</form>
-		<!--</div>-->
+		</div>
 	</body>
 </html>
 {/source}
