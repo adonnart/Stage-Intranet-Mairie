@@ -5,13 +5,13 @@
 		<?php
 			function listeContacts($pole){
 				if (!empty($pole->id)){
-					echo "<li><input class='liste' type='radio' name='.$pole->id.' id='.$pole->id.' />
+					echo "<li><input class='liste' type='radio' name='r-id' id='.$pole->id.' />
 					<label for='.$pole->id.'>".$pole->id."</label>";
 				}
 				echo "<ul class='liste'>";
 				foreach ($pole as $contact){
 					if (!empty($contact->nom)){
-						echo "<li><input class='saisie' type='radio' name='.$contact->nom.' id='.$contact->nom.' />
+						echo "<li><input class='saisie' type='radio' name='r-name' id='.$contact->nom.' />
 						<label for='.$contact->nom.'>".$contact->nom."</label>";
 						// Saisie
 						echo "<ul class='saisie'>";
