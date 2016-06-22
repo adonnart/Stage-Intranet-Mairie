@@ -1,6 +1,6 @@
 {source}
 <html>
-	<head><title>Annuaire - Modifier</title></head>
+	<head><title>Annuaire - Modifier</title><link href="annuaire/annuaire.css" rel="stylesheet"></head>
 	<body>
 		<!--<form action="" method="post">
 	        	<select size="2" id="pole">
