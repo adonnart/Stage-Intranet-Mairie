@@ -1,9 +1,7 @@
 {source}<?php
-	
-	//Ajouter
-	
-	//Chargement
+
 	$file = 'annuaire/test-v3.xml';
+	
 	$dom = new DOMDocument('1.0');
 	$dom -> preserveWhiteSpace = false;
 	$dom -> load($file);
@@ -45,22 +43,9 @@
 	
 	$pole -> appendChild($contact);
 
-	//Sauvegarde
 	$dom->formatOutput = true;
 	$dom->normalizeDocument();
 	$dom -> save($file);
 	echo "<br/>Sauvegarde effectuée.<br/>";
-	
-	// Modifier
-	
-	$noms = $pole -> getElementsByTagName('nom');
-	
-	
-	/*
-	
-	- Ajouter un contact à la fin d'un pôle
-	- Remplacer un contact
-	
-	*/
 
 ?>{/source}
