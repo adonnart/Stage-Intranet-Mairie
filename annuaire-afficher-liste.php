@@ -2,11 +2,10 @@
 <html>
 	<head><title>Annuaire - Modifier</title><link href="annuaire/annuaire.css" rel="stylesheet"></head>
 	<body>
-		
 		<?php
 			function listeContacts($pole){
 				if (!empty($pole->id)){ echo "<li>".$pole->id; }
-				echo "<ul class='modif'>";
+				echo "<div class='modif'><ul>";
 				foreach($pole as $contact){ if (!empty($contact->nom)){ echo "<li>".$contact->nom."</li>"; } }
 				echo "</ul></li>";
 			}
@@ -25,7 +24,7 @@
 				}
 				echo "</ul>";
 			}
-			echo "</ul>";
+			echo "</ul></div>";
 		?>
 	</body>
 </html>
