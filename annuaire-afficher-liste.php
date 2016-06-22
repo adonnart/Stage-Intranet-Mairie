@@ -66,4 +66,38 @@
 		?>
 	</body>
 </html>
+
+<!-- Test affichage dossiers
+<link href="annuaire/annuaire.css" rel="stylesheet">
+<ul class="modif">
+<li><input type="checkbox" id="c1" />
+<i class="fa fa-angle-double-right"></i>
+<i class="fa fa-angle-double-down"></i>
+<label for="c1">Dossier A</label>
+<ul>
+<li>Sous dossier A1</li>
+<li>Sous dossier A2</li>
+<li>Sous dossier A3</li>
+</ul>
+</li>
+<li class="modif"><input type="checkbox" id="c2" />
+<i class="fa fa-angle-double-right"></i>
+<i class="fa fa-angle-double-down"></i>
+<label for="c2">Dossier B</label>
+<ul>
+<li>Sous dossier B1</li>
+<li><input type="checkbox" id="c3" />
+<i class="fa fa-angle-double-right"></i>
+<i class="fa fa-angle-double-down"></i>
+<label for="c3">Sous dossier B2</label>
+<ul>
+<li>Sous-sous dossier B21</li>
+<li>Sous-sous dossier B22</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+-->
+
 {/source}
