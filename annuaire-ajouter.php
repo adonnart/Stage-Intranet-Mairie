@@ -8,12 +8,11 @@
 	$dom -> validate();
 	echo "Fichier ouvert.<br/>";
 	
+	$idPole = "Jeunesse";
 	$poste	= "";
 	$nom	= "truc";
 	$port	= "";
 	$fixe	= "02 98 11 11 11";
-	
-	$idPole = "Jeunesse";
 	
 	$contact = $dom -> createElement('contact');
 	
