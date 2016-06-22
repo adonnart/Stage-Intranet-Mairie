@@ -50,7 +50,7 @@ i {
 }
 .modif input:checked ~ ul {
 	display: block;
-}/*
+}
 input ~ .fa-angle-double-down {
   display: none;
 }
@@ -59,7 +59,7 @@ input:checked ~ .fa-angle-double-right {
 }
 input:checked ~ .fa-angle-double-down {
   display: inline;
-}*/
+}
 /* Habillage */
 .modif li {
   display: block;
@@ -71,5 +71,5 @@ input:checked ~ .fa-angle-double-down {
 .modif li:hover {
   border: 1px solid #FFAA2A;
   border-radius: 3px;
-  /*background-color: lightgrey;*/
+  background-color: #FFF7EE;
 }
