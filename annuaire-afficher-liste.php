@@ -3,9 +3,10 @@
 	<head><title>Annuaire - Modifier</title><link href="annuaire/annuaire.css" rel="stylesheet"></head>
 	<body>
 		<?php
-			function listeContacts($pole){
+			function listeContacts($pole, $p){
 				if (!empty($pole->id)){
-					echo "<li><input class='liste' type='radio' name='.$pole->id.' id='.$pole->id.' />
+					$name = "pole".$p;
+					echo "<li><input class='liste' type='radio' name='$name' id='.$pole->id.' />
 					<label for='.$pole->id.'>".$pole->id."</label>";
 				}
 				echo "<ul class='liste'>";
@@ -16,17 +17,17 @@
 						// Saisie
 						echo "<ul class='saisie'>";
 						//include "annuaire/saisie.php";
-						?><form action="modifier.php" method="post">
+						echo "<fieldset><form action='' method='post'>
 							<label>Nom : </label>
-							<input class='saisie' type='text' name='nom' value='<?php echo $contact->nom;?>'/>
+							<input type='text' name='nom' value='$contact->nom' />
 							<label>Poste : </label>
-							<input type='text' name='poste' value='<?php echo $contact->poste;?>'/>
+							<input type='text' name='poste' value='$contact->poste' />
 							<label>Fixe : </label>
-							<input type='text' name='fixe' value='<?php echo $contact->fixe;?>'/>
+							<input type='text' name='fixe' value='$contact->fixe' />
 							<label>Portable : </label>
-							<input type='text' name='port' value='<?php echo $contact->port;?>'/>
-							<input class='saisie' type="submit" value="Sauvegarder"/>
-						</form><?php
+							<input type='text' name='port' value='$contact->port' />
+							<input type='submit' name = 'save' value='Sauvegarder'/>
+						</form></fieldset>";
 						echo "</ul>";
 						// Saisie
 						echo "</li>";
@@ -45,11 +46,11 @@
 			<ul class='liste'>
 			<?php
 				foreach ($xml as $pole1){
-					listeContacts($pole1);
+					$p = 1; listeContacts($pole1,$p);
 					echo "<ul class='liste'>";
 					foreach ($pole1 as $pole2){
 						if (!empty($pole1->pole2)){
-							listeContacts($pole2);
+							$p = 2; listeContacts($pole2,$p);
 						}
 					}
 					echo "</ul>";
