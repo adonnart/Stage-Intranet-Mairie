@@ -32,7 +32,7 @@ if (!empty($_POST)){
 	$port = $_POST['port'];
 	$idPole = $_POST['pole'];
 
-	$file = 'annuaire/test-v3.xml';
+	$file = 'annuaire/annuaire.xml';
 	
 	$dom = new DOMDocument('1.0');
 	$dom -> preserveWhiteSpace = false;
