@@ -40,23 +40,21 @@
 		$cpt++;
 	}
 	
+	/* Modifier (remplacer) */
+	
+	
+	
+	// $noms = $pole -> getElementsByTagName('nom');
+	
+	/* Ajouter
+	
 	$pole -> appendChild($contact);
-
+	
+	*/
+	
 	$dom->formatOutput = true;
 	$dom->normalizeDocument();
 	$dom -> save($file);
 	echo "<br/>Sauvegarde effectuée.<br/>";
-	
-	// Modifier
-	
-	// $noms = $pole -> getElementsByTagName('nom');
-	
-	
-	/*
-	
-	- Ajouter un contact à la fin d'un pôle
-	- Remplacer un contact
-	
-	*/
 
 ?>{/source}
