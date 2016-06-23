@@ -5,7 +5,7 @@
 		<?php
 			function listeContacts($pole){
 				if (!empty($pole->id)){
-					echo "<li><input class='liste' type='radio' name='r-id' id='.$pole->id.' />
+					echo "<li><input class='liste' type='radio' name='.$pole->id.' id='.$pole->id.' />
 					<label for='.$pole->id.'>".$pole->id."</label>";
 				}
 				echo "<ul class='liste'>";
@@ -16,7 +16,7 @@
 						// Saisie
 						echo "<ul class='saisie'>";
 						//include "annuaire/saisie.php";
-						?><form action="" method="post">
+						?><form action="modifier.php" method="post">
 							<label>Nom : </label>
 							<input class='saisie' type='text' name='nom' value='<?php echo $contact->nom;?>'/>
 							<label>Poste : </label>
@@ -45,12 +45,10 @@
 			<ul class='liste'>
 			<?php
 				foreach ($xml as $pole1){
-					//$p1 = "";
 					listeContacts($pole1);
 					echo "<ul class='liste'>";
 					foreach ($pole1 as $pole2){
 						if (!empty($pole1->pole2)){
-							//$p2 = "";
 							listeContacts($pole2);
 						}
 					}
