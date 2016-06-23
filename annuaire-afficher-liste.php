@@ -39,12 +39,20 @@
 						<label>Portable : </label>
 						<input type='text' name='port' value='$contact->port' 
 							onkeypress='refuserToucheEntree(event);' />
-						<br/><input type='submit' name='save' value='Sauvegarder' />
-						</form></fieldset></ul></li>";
+						<br/><input type='submit' name='save' value='Sauvegarder' /><br/>";
+						
+						//Traitement des données
+						
+						
+						
+						echo "</form></fieldset></ul></li>";
 						/* Données à envoyer pour la validation :
 						$pole1
 						$pole2
 						$contact
+						
+						if 
+						
 						*/
 					}
 				}
