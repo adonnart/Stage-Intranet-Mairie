@@ -24,7 +24,7 @@
 		}
 	}
 	
-	$file = 'annuaire/test-v3.xml';
+	$file = 'annuaire/annuaire.xml';
 	$xml = simplexml_load_file($file) or die("Fichier ".$file." introuvable.");
 	
 	foreach($xml as $pole1){
