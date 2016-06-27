@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE annuaire [
 <!ELEMENT annuaire (pole1)+>
-<!ELEMENT pole1 (id , fax? , contact+ , pole2*)>
+<!ELEMENT pole1 (id , contact+ , pole2*)>
 <!ELEMENT pole2 (id , fax? , contact*)>
 <!ELEMENT id (#PCDATA)>
 <!ELEMENT fax (#PCDATA)>
