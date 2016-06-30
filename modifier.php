@@ -39,7 +39,7 @@
 						<label for='port'>Portable : </label>
 						<input type='text' id='port' name='port' value='$contact->port' 
 							onkeypress='refuserToucheEntree(event);' />
-						<input type='submit' name='save' value='Sauvegarder' />";
+						<br/><input type='submit' name='save' value='Sauvegarder' />";
 						//Traitement des données
 						/*$nom = $_POST['nom'];
 						$poste = $_POST['poste'];
