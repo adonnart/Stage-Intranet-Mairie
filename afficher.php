@@ -1,9 +1,10 @@
+{source}
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Annuaire</title>
+		<title>Annuaire - Afficher</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" content="text/css" href="annuaire.css" />
+		<link rel="stylesheet" content="text/css" href="annuaire/annuaire.css" />
 	</head>
 	<body>
 		<div class='colonnes'>
@@ -29,7 +30,7 @@
 				}
 			}
 			
-			$file = 'annuaire.xml';
+			$file = 'annuaire/annuaire.xml';
 			$xml = simplexml_load_file($file) or die("Fichier ".$file." introuvable.");
 			
 			foreach($xml as $pole1){
@@ -54,3 +55,4 @@
 		</div>
 	</body>
 </html>
+{/source}
