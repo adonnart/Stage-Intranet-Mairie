@@ -1,9 +1,10 @@
+{source}
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Annuaire - Ajouter</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" content="text/css" href="annuaire.css" />
+		<link rel="stylesheet" content="text/css" href="annuaire/annuaire.css" />
 		<script>
 			function refuserToucheEntree(event){
 				if (!event && window.event){ event = window.event; }
@@ -34,7 +35,7 @@
 						$port = $_POST['port'];
 						$idPole = $_POST['pole'];
 
-						$file = 'annuaire.xml';
+						$file = 'annuaire/annuaire.xml';
 						
 						$dom = new DOMDocument('1.0');
 						$dom -> preserveWhiteSpace = false;
@@ -81,3 +82,4 @@
 		</fieldset>
 	</body>
 </html>
+{/source}
